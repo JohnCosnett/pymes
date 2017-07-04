@@ -1,0 +1,19 @@
+
+Python3______________________________________________________________________
+conda create -n tensorflow_ipykernel_py3 python=3 ipykernel
+
+pip install --ignore-installed --upgrade https://storage.googleapis.com/tensorflow/mac/cpu/tensorflow-1.2.0-py3-none-any.whl
+______________________________________________________________________
+
+
+
+
+
+Python2______________________________________________________________________
+conda create -n tensorflow python=2 ipykernel
+
+pip install --ignore-installed --upgrade https://storage.googleapis.com/tensorflow/mac/cpu/tensorflow-1.2.0-py2-none-any.whl______________________________________________________________________
+
+
+detect_kernel________________________nteract
+python -m ipykernel install --user
