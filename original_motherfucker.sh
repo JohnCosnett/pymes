@@ -11,6 +11,7 @@ pause 'Press [Enter] key to continue...'
 
 # location of where to place the flowers data
 FLOWERS_DATA_DIR=/tmp/flowers-data/
+FLOWERS_DATA_DIR2=$HOME/flowers-data/
 pause '___________--1'
 
 
@@ -21,7 +22,7 @@ pause '___________--2'
 bazel build //inception:download_and_preprocess_flowers
 pause '___________--3'
 # run it
-bazel-bin/inception/download_and_preprocess_flowers "${FLOWERS_DATA_DIR}"
+bazel-bin/inception/download_and_preprocess_flowers "${FLOWERS_DATA_DIR2}"
 pause '___________--4'
 
 
@@ -70,17 +71,19 @@ pause '___________--16'
 
 # Directory where the flowers data resides.
 FLOWERS_DATA_DIR=/tmp/flowers-data/
+FLOWERS_DATA_DIR2=$HOME/flowers-data/
 pause '___________--17'
 
 # Directory where to save the checkpoint and events files.
 TRAIN_DIR=/tmp/flowers_train/
+TRAIN_DIR2=$HOME/flowers_train/
 pause '___________--18'
 
 # Run the fine-tuning on the flowers data set starting from the pre-trained
 # Imagenet-v3 model.
 bazel-bin/inception/flowers_train \
-  --train_dir="${TRAIN_DIR}" \
-  --data_dir="${FLOWERS_DATA_DIR}" \
+  --train_dir="${TRAIN_DIR2}" \
+  --data_dir="${FLOWERS_DATA_DIR2}" \
   --pretrained_model_checkpoint_path="${MODEL_PATH}" \
   --fine_tune=True \
   --initial_learning_rate=0.001 \
