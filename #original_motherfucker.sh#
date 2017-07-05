@@ -1,3 +1,4 @@
+
 #!bin/bash
 
 function pause(){
@@ -61,7 +62,7 @@ pause '___________--13'
 # use before this as this command will not build TensorFlow.
 cd ~/cube_0/models/inception
 pause '___________--14'
-bazel build //inception:flowers_train
+sudo bazel build //inception:flowers_train
 pause '___________--15'
 
 # Path to the downloaded Inception-v3 model.
@@ -78,7 +79,7 @@ pause '___________--18'
 
 # Run the fine-tuning on the flowers data set starting from the pre-trained
 # Imagenet-v3 model.
-bazel-bin/inception/flowers_train \
+sudo bazel-bin/inception/flowers_train \
   --train_dir="${TRAIN_DIR}" \
   --data_dir="${FLOWERS_DATA_DIR}" \
   --pretrained_model_checkpoint_path="${MODEL_PATH}" \
