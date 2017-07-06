@@ -20,10 +20,10 @@ cd ~/cube_0/models/inception
 
 
 bazel build //inception:download_and_preprocess_flowers
-pause '___________--3'
+
 # run it
 bazel-bin/inception/download_and_preprocess_flowers "${FLOWERS_DATA_DIR2}"
-pause '___________--4'
+
 
 
 
