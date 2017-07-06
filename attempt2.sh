@@ -21,7 +21,7 @@ tar xzf inception-v3-2016-03-01.tar.gz
 
 # Build the model. Note that we need to make sure the TensorFlow is ready to
 # use before this as this command will not build TensorFlow.
-cd tensorflow-models/inception
+cd ~/cube_0/models/inception
 bazel build //inception:flowers_train
 
 # Path to the downloaded Inception-v3 model.
