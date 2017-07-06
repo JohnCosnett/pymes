@@ -1,5 +1,5 @@
 python2_ubuntu__________________________________________________________________
-
+# ami-cd1ffab4
 M-<
 M->
 
@@ -53,4 +53,16 @@ ssh -i "asdf.pem" ubuntu@ec2-52-212-117-173.eu-west-1.compute.amazonaws.com
 
 
 
+
+scp -i ~/Desktop/amazon.pem ~/Desktop/MS115.fa  ubuntu@ec2-54-166-128-20.compute-1.amazonaws.com:~/data/
+
+amazon()
+{
+    number=2-52-17-233-59
+    HO_DIR=~/Downloads/ubuntu_1.pem;
+    chmod 400 ${HO_DIR};
+    ssh -i "${HO_DIR}" ubuntu@ec${number}.eu-west-1.compute.amazonaws.com
+
+
+}
 

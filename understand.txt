@@ -1,0 +1,8 @@
+WARNING: failed to create one or more convenience symlinks for prefix 'bazel-':
+  cannot create symbolic link bazel-out ->
+
+/home/ubuntu/.cache/bazel/_bazel_ubuntu/53d38f7ce0f39882b8d37797afb6cc21/execroot/inception/bazel-out:
+
+/home/ubuntu/cube_0/models/inception/bazel-out (Permission denied)
+
+  cannot create symbolic link bazel-inception -> /home/ubuntu/.cache/bazel/_bazel_ubuntu/53d38f7ce0f39882b8d37797afb6cc21/execroot/inception:  /home/ubuntu/cube_0/models/inception/bazel-inception (Permission denied)

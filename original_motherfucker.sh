@@ -1,5 +1,5 @@
 #!/usr/bin/zsh
-
+#eu-west-1: ami-cd1ffab4
 function pause(){
    read -p "$*"
 }
