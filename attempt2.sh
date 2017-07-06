@@ -2,7 +2,7 @@
 FLOWERS_DATA_DIR=/tmp/flowers-data/
 
 # build the preprocessing script.
-cd tensorflow-models/inception
+cd ~/cube_0/models/inception
 bazel build //inception:download_and_preprocess_flowers
 
 # run it
