@@ -19,10 +19,10 @@ FLOWERS_DATA_DIR2=$HOME/flowers-data/
 cd ~/cube_0/models/inception
 #pause '___________--2'
 
-sudo bazel build //inception:download_and_preprocess_flowers
+bazel build //inception:download_and_preprocess_flowers
 pause '___________--3'
 # run it
-sudo bazel-bin/inception/download_and_preprocess_flowers "${FLOWERS_DATA_DIR2}"
+bazel-bin/inception/download_and_preprocess_flowers "${FLOWERS_DATA_DIR2}"
 pause '___________--4'
 
 
@@ -45,15 +45,6 @@ pause '___________--8'
 tar xzf inception-v3-2016-03-01.tar.gz
 pause '___________--9'
 
-# this will create a directory called inception-v3 which contains the following files.
-> ls inception-v3
-pause '___________--10'
-README.txt
-pause '___________--11'
-checkpoint
-pause '___________--12'
-model.ckpt-157585
-pause '___________--13'
 
 
 
@@ -62,7 +53,7 @@ pause '___________--13'
 # use before this as this command will not build TensorFlow.
 cd ~/cube_0/models/inception
 pause '___________--14'
-sudo bazel build //inception:flowers_train
+bazel build //inception:flowers_train
 pause '___________--15'
 
 # Path to the downloaded Inception-v3 model.
@@ -81,7 +72,7 @@ pause '___________--18'
 
 # Run the fine-tuning on the flowers data set starting from the pre-trained
 # Imagenet-v3 model.
-sudo bazel-bin/inception/flowers_train \
+bazel-bin/inception/flowers_train \
   --train_dir="${TRAIN_DIR2}" \
   --data_dir="${FLOWERS_DATA_DIR2}" \
   --pretrained_model_checkpoint_path="${MODEL_PATH}" \
