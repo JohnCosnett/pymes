@@ -1,4 +1,4 @@
-#!/usr/bin/zsh
+#!/bin/bash
 #eu-west-1: ami-cd1ffab4
 function pause(){
    read -p "$*"
